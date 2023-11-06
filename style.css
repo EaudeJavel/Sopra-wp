@@ -22,12 +22,26 @@
     list-style: none; }
     .header-menu .menu-header-main-menu-container .menu .menu-item {
       height: 50px;
-      line-height: 50px; }
+      line-height: 50px;
+      padding-right: 45px; }
       .header-menu .menu-header-main-menu-container .menu .menu-item a {
-        padding-right: 45px;
         font-size: 0.75rem;
         font-weight: 500;
-        text-transform: uppercase; }
+        text-transform: uppercase;
+        position: relative;
+        transition: color 0.3s ease; }
+        .header-menu .menu-header-main-menu-container .menu .menu-item a::after {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 1px;
+          bottom: -5px;
+          left: 0;
+          background: linear-gradient(315.38deg, #fd13ee 0.95%, #fd5e84 51.19%, #fec038 102.55%);
+          transition: width 0.3s ease;
+          pointer-events: none; }
+        .header-menu .menu-header-main-menu-container .menu .menu-item a:hover::after {
+          width: 100%; }
   .header-menu .right-holder {
     display: flex;
     align-items: center; }
