@@ -42,12 +42,12 @@
             content: "";
             position: absolute;
             width: 0;
-            height: 1px; // Thickness of the underline
-            bottom: -5px; // Distance of the underline from the text
+            height: 1px;
+            bottom: -5px;
             left: 0;
-            background: $primary-gradient; // The color of the underline
-            transition: width 0.3s ease; // Smooth transition for the underline width
-            pointer-events: none; // Ensure it doesn't interfere with link events
+            background: $primary-gradient;
+            transition: width 0.3s ease;
+            pointer-events: none;
           }
 
           &:hover {

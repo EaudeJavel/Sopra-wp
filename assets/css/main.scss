@@ -1,8 +1,13 @@
+@import "reset";
+@import "fonts";
 @import "variables";
 @import "header";
+@import "home";
+@import "whitepapers";
 
 body {
   background-color: $background-color;
+  font-family: "BatonTurboWeb-Regular", sans-serif;
 }
 
 a {
@@ -22,4 +27,14 @@ a {
 // hide "made with FullPage.js
 .fp-watermark {
   display: none;
+}
+
+.btn {
+  display: inline-block;
+  letter-spacing: 0.03em;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 0.25rem;
 }
