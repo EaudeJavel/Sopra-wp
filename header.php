@@ -28,11 +28,16 @@
 			<div class="header-menu">
 
 				<!-- Logo -->
-				<a href="<?php echo home_url(); ?>">
-					<?php if ( function_exists( 'the_custom_logo' ) ) {
+				<!-- fix the issue where i had two links created and rendered -->
+				<?php
+					if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
 						the_custom_logo();
-					} ?>
-				</a>
+					} else {
+						echo '<a href="' . esc_url( home_url( '/' ) ) . '" rel="home">';
+						echo '<img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/Sopra Logos Final - 200717_color-white' . get_bloginfo( 'name' ) . '" />';
+						echo '</a>';
+					}
+				?>
 
 				<!-- Menu -->
 				<?php
