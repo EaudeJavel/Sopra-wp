@@ -107,4 +107,7 @@ a {
   .section .content {
     margin: 50px; }
 
+.fp-watermark {
+  display: none; }
+
 /*# sourceMappingURL=style.css.map */

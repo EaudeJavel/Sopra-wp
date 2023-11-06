@@ -9,22 +9,22 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Sopra
+ * @package Sopratheme
  */
 
 	get_header();
 ?>
 
 <div id="fullpage">
-    <div class="section">One</div>
-    <div class="section">Two</div>
     <div class="section">
-      <div class="content">Three</div>
+        <div class="slide">Slide 1</div>
+        <div class="slide">Slide 1.2</div>
     </div>
-    <div class="section fp-auto-height">
-      <div class="content">Four</div>
-  </div>
+	<div class="section">Section 2</div>
+	<div class="section fp-auto-height">
+		<div>Section 3</div>
+
+	</div>
 </div>
 
-
-<?php get_footer();
+<?php get_footer(); ?>

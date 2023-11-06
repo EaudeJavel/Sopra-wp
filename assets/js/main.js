@@ -1,12 +1,11 @@
 // Init fullpage js
 
-// new fullpage('#fullpage', {
-//     //options here
-//     autoScrolling:true,
-//     scrollHorizontally: true
-// });
+let footerShown = false;
 
-new fullpage('#fullpage', {
-    anchors: ['page1', 'page2', 'page3', 'page4'],
-    sectionsColor: ['yellow', 'orange', '#C0C0C0', '#ADD8E6'],
-  });
+new fullpage("#fullpage", {
+  anchors: ["firstPage", "secondPage", "footer"],
+  sectionsColor: ["yellow", "blue", "green"],
+  navigation: true,
+  slidesNavigation: true,
+  slidesNavPosition: "bottom",
+});
