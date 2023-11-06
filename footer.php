@@ -1,7 +1,8 @@
-</div><!-- #page -->
+</div>
 
-<div>TEST</div>
-
+<?php
+    wp_footer(  )
+?>
 
 </body>
 </html>

@@ -12,21 +12,19 @@
  * @package Sopra
  */
 
-get_header();
+	get_header();
 ?>
-	<?php
-	while ( have_posts() ) :
-		the_post();
 
-		get_template_part( 'template-parts/content/content', 'page' );
+<div id="fullpage">
+    <div class="section">One</div>
+    <div class="section">Two</div>
+    <div class="section">
+      <div class="content">Three</div>
+    </div>
+    <div class="section fp-auto-height">
+      <div class="content">Four</div>
+  </div>
+</div>
 
-		// If comments are open or we have at least one comment, load up the comment template.
-		if ( comments_open() || get_comments_number() ) :
-			comments_template();
-		endif;
 
-	endwhile; // End of the loop.
-	?>
-
-<?php get_sidebar();?>
 <?php get_footer();

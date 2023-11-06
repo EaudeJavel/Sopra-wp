@@ -1,0 +1,20 @@
+@import "variables";
+@import "header";
+
+body {
+  background-color: $background-color;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  word-wrap: break-word;
+}
+
+.section {
+  text-align: center;
+  font-size: 3em;
+  .content {
+    margin: 50px;
+  }
+}

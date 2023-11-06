@@ -1,0 +1,107 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: $background-color;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: auto;
+
+  .custom-logo-link img {
+    width: 250px;
+    height: auto;
+    display: flex; //place logo in the center
+  }
+
+  .menu-header-main-menu-container {
+    .menu {
+      display: flex;
+      list-style: none;
+
+      .menu-item {
+        height: 50px;
+        line-height: 50px;
+
+        a {
+          padding-right: 45px;
+          font-size: 0.75rem;
+          font-weight: 500;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  .right-holder {
+    display: flex;
+    align-items: center;
+
+    .contact-button {
+      padding: 8px 16px;
+      border: 1px solid #fff;
+      text-decoration: none;
+      margin-right: 20px;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+
+    .contact-button:hover {
+      background-color: #fff;
+      color: #171717;
+    }
+
+    // TODO: search bar design
+
+    .search-bar {
+      position: relative;
+      display: inline-block;
+      margin-left: 20px;
+      width: 150px;
+      height: 50px;
+      background-color: pink;
+
+      .search-field {
+        width: 100%;
+        height: 100%;
+        border: 1px solid transparent;
+        padding: 8px;
+        font-size: 16px;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+        position: absolute;
+        right: 0;
+        background: none;
+        cursor: pointer;
+      }
+
+      .search-field:focus {
+        outline: none;
+        width: 200px; /* Width when active */
+        padding-right: 40px; /* Padding to make space for the icon */
+        cursor: text;
+        border-color: #ddd; /* Add border color when focused */
+      }
+
+      .search-icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 9px;
+        cursor: pointer;
+      }
+
+      /* Use a font library like Font Awesome for the search icon or use background-image */
+      .search-icon i {
+        font-size: 20px;
+      }
+    }
+  }
+}
