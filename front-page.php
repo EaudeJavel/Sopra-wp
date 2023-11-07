@@ -70,7 +70,24 @@
     </div>
 	<div class="section section-our_mission">
 
-		<div>Section 2</div>
+		<!-- if homepage has field slide-3, then  -->
+			<?php
+				$hero = get_field('slide-3');
+				if( $hero ):
+			?>
+			<!-- <div class="hero-data-container">
+				<h2 class="hero-data-container__container__title"><?php echo $hero['slide-title'];?></h2>
+
+				<h1 class="main-title"><?php echo $hero['slide-description'];?></h1>
+
+				<button class="btn btn-primary"><?php echo $hero['button-text'];?></button>
+			</div> -->
+			<?php endif;
+
+				get_template_part( 'templates/content', 'videos' ); ?>
+
+		</div>
+
 
 	</div>
 	<div class="section fp-auto-height section-footer">

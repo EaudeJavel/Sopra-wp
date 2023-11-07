@@ -325,6 +325,85 @@ table {
   background-color: #171717;
   color: white; }
 
+.videos-block {
+  width: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #171717;
+  color: white;
+  text-align: left;
+  padding: 10px;
+  min-height: 600px; }
+  .videos-block__title {
+    padding: 10px;
+    margin-bottom: 6px;
+    font-size: 1rem;
+    text-decoration: underline; }
+  .videos-block__article {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    min-height: 160px;
+    font-size: 24px;
+    text-align: left;
+    padding: 10px; }
+    .videos-block__article__title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      font-family: "BatonTurboWeb-Bold"; }
+    .videos-block__article * {
+      margin: 5px 0; }
+    .videos-block__article__category-badge {
+      height: 20px;
+      font-size: 0.6rem;
+      display: flex;
+      align-items: center;
+      transition: all 0.3s ease;
+      text-transform: uppercase; }
+      .videos-block__article__category-badge a {
+        background: linear-gradient(313.38deg, #ff54c1 -2.79%, #ffb68d 50.95%, #ffc700 102.51%);
+        color: #171717;
+        padding: 2px 10px;
+        border-radius: 0.1rem; }
+      .videos-block__article__category-badge:hover {
+        background-color: #171717;
+        color: #fff; }
+    .videos-block__article__actions {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between; }
+      .videos-block__article__actions__container {
+        display: flex;
+        flex-direction: column; }
+        .videos-block__article__actions__container__author {
+          font-size: 0.7rem;
+          font-weight: 500;
+          color: #fff; }
+        .videos-block__article__actions__container__date {
+          font-size: 0.7rem;
+          font-weight: 500;
+          color: #fff; }
+      .videos-block__article__actions__button {
+        font-size: 0.7rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        position: relative;
+        transition: color 0.3s ease;
+        font-family: "BatonTurboWeb-Bold"; }
+        .videos-block__article__actions__button::after {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 1px;
+          bottom: -5px;
+          left: 0;
+          background: linear-gradient(315.38deg, #fd13ee 0.95%, #fd5e84 51.19%, #fec038 102.55%);
+          transition: width 0.3s ease;
+          pointer-events: none; }
+        .videos-block__article__actions__button:hover::after {
+          width: 100%; }
+
 .whitepapers-block {
   max-width: 1024px;
   width: 100%;

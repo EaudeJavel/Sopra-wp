@@ -1,0 +1,110 @@
+.videos-block {
+  width: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #171717;
+  color: white;
+  text-align: left;
+  padding: 10px;
+  min-height: 600px;
+
+  &__title {
+    padding: 10px;
+    margin-bottom: 6px;
+    font-size: 1rem;
+    text-decoration: underline;
+  }
+
+  &__article {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    min-height: 160px;
+    font-size: 24px;
+    text-align: left;
+    padding: 10px;
+
+    &__title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      font-family: "BatonTurboWeb-Bold";
+    }
+
+    * {
+      margin: 5px 0;
+    }
+
+    &__category-badge {
+      height: 20px;
+      font-size: 0.6rem;
+      display: flex;
+      align-items: center;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+
+      a {
+        background: $sat-yellow-gradient;
+        color: $background-color;
+        padding: 2px 10px;
+        border-radius: 0.1rem;
+      }
+
+      &:hover {
+        background-color: $background-color;
+        color: #fff;
+      }
+    }
+
+    &__actions {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      &__container {
+        display: flex;
+        flex-direction: column;
+
+        &__author {
+          font-size: 0.7rem;
+          font-weight: 500;
+          color: #fff;
+        }
+
+        &__date {
+          font-size: 0.7rem;
+          font-weight: 500;
+          color: #fff;
+        }
+      }
+
+      &__button {
+        font-size: 0.7rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        position: relative;
+        transition: color 0.3s ease;
+        font-family: "BatonTurboWeb-Bold";
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 1px;
+          bottom: -5px;
+          left: 0;
+          background: $primary-gradient;
+          transition: width 0.3s ease;
+          pointer-events: none;
+        }
+
+        &:hover {
+          // Expand the pseudo-element to full width on hover
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
