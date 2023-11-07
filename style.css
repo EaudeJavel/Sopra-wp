@@ -222,40 +222,54 @@ table {
       .header-menu .right-holder .search-bar .search-icon i {
         font-size: 20px; }
 
-#fullpage .section-our_mission {
-  background: linear-gradient(140.72deg, #93ffde -6.15%, #a6bfff 65.26%, #d9a8ff 126.96%); }
-#fullpage .section .hero-slide-right {
-  background: linear-gradient(148.95deg, #70ffd4 -0.87%, #87a9ff 51.78%, #af49ff 97.26%); }
+#fullpage .section .hero-slide,
+#fullpage .section .hero-slide-right,
 #fullpage .section .hero {
-  background: linear-gradient(313.38deg, #ff54c1 -2.79%, #ffb68d 50.95%, #ffc700 102.51%);
+  background: linear-gradient(148.95deg, #70ffd4 -0.87%, #87a9ff 51.78%, #af49ff 97.26%);
   padding-top: 86px;
   height: 100%; }
+  #fullpage .section .hero-slide .fp-overflow,
+  #fullpage .section .hero-slide-right .fp-overflow,
   #fullpage .section .hero .fp-overflow {
     max-width: 1280px;
     width: 100%;
     margin: auto; }
+    #fullpage .section .hero-slide .fp-overflow .bg-image img,
+    #fullpage .section .hero-slide-right .fp-overflow .bg-image img,
     #fullpage .section .hero .fp-overflow .bg-image img {
       position: absolute;
       left: -40px;
       z-index: 0; }
+    #fullpage .section .hero-slide .fp-overflow .test,
+    #fullpage .section .hero-slide-right .fp-overflow .test,
     #fullpage .section .hero .fp-overflow .test {
       z-index: 1; }
+  #fullpage .section .hero-slide .hero-data-container,
+  #fullpage .section .hero-slide-right .hero-data-container,
   #fullpage .section .hero .hero-data-container {
     display: flex;
     flex-direction: column;
     width: 43%;
     text-align: left;
     color: #fff; }
+    #fullpage .section .hero-slide .hero-data-container .slide-title,
+    #fullpage .section .hero-slide-right .hero-data-container .slide-title,
     #fullpage .section .hero .hero-data-container .slide-title {
       font-size: 0.8em;
       font-weight: 500;
       margin-bottom: 20px; }
+    #fullpage .section .hero-slide .hero-data-container .main-title,
+    #fullpage .section .hero-slide-right .hero-data-container .main-title,
     #fullpage .section .hero .hero-data-container .main-title {
       font-size: 1.2em;
       font-weight: 700;
       margin-bottom: 20px; }
+    #fullpage .section .hero-slide .hero-data-container *,
+    #fullpage .section .hero-slide-right .hero-data-container *,
     #fullpage .section .hero .hero-data-container * {
       margin: 0; }
+    #fullpage .section .hero-slide .hero-data-container .btn-primary,
+    #fullpage .section .hero-slide-right .hero-data-container .btn-primary,
     #fullpage .section .hero .hero-data-container .btn-primary {
       width: 120px;
       height: 40px;
@@ -264,6 +278,8 @@ table {
       color: #171717;
       border: none;
       transition: all 0.3s ease; }
+      #fullpage .section .hero-slide .hero-data-container .btn-primary::before,
+      #fullpage .section .hero-slide-right .hero-data-container .btn-primary::before,
       #fullpage .section .hero .hero-data-container .btn-primary::before {
         bottom: 110%;
         content: "";
@@ -276,12 +292,20 @@ table {
         transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
         width: calc(100% + 20px);
         z-index: -1; }
+      #fullpage .section .hero-slide .hero-data-container .btn-primary:hover,
+      #fullpage .section .hero-slide-right .hero-data-container .btn-primary:hover,
       #fullpage .section .hero .hero-data-container .btn-primary:hover {
         color: #fff;
         background-color: #171717; }
+        #fullpage .section .hero-slide .hero-data-container .btn-primary:hover::before,
+        #fullpage .section .hero-slide-right .hero-data-container .btn-primary:hover::before,
         #fullpage .section .hero .hero-data-container .btn-primary:hover::before {
           -webkit-transform: translate3d(0, -10px, 0);
           transform: translate3d(0, -10px, 0); }
+#fullpage .section .hero {
+  background: linear-gradient(313.38deg, #ff54c1 -2.79%, #ffb68d 50.95%, #ffc700 102.51%); }
+#fullpage .section-our_mission {
+  background: linear-gradient(140.72deg, #93ffde -6.15%, #a6bfff 65.26%, #d9a8ff 126.96%); }
 #fullpage .section-footer {
   background-color: #171717;
   color: white; }
@@ -291,7 +315,8 @@ table {
   height: 200px;
   display: flex;
   background-color: #171717;
-  color: white; }
+  color: white;
+  margin: 45px 0; }
   .whitepapers-block__title span {
     transform: rotate(-90deg);
     font-size: 1rem; }

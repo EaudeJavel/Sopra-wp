@@ -17,7 +17,7 @@
 
 <div id="fullpage">
     <div class="section">
-        <div class="slide hero">
+        <div class="slide hero-slide hero">
 			<!-- if homepage has field slide-1, then  -->
 			<?php
 				$hero = get_field('slide-1');
@@ -35,8 +35,8 @@
 
 		</div>
 
-		<div class="slide hero">
-			<!-- if homepage has field slide-1, then  -->
+		<div class="slide hero-slide-right">
+			<!-- if homepage has field slide-2, then  -->
 			<?php
 				$hero = get_field('slide-2');
 				if( $hero ):
@@ -53,6 +53,11 @@
 
 		</div>
     </div>
+	<div class="section section-our_mission">
+
+		<div>Section 2</div>
+
+	</div>
 	<div class="section fp-auto-height section-footer">
 
 		<div>Section 3</div>
