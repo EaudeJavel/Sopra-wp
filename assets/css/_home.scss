@@ -9,7 +9,7 @@
 
       .fp-overflow {
         max-width: 1280px;
-        width: 100%;
+        width: 85%;
         margin: auto;
 
         .bg-image img {
@@ -30,20 +30,32 @@
         text-align: left;
         color: #fff;
 
-        .slide-title {
-          font-size: 0.8em;
-          font-weight: 500;
-          margin-bottom: 20px;
+        &__container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 24px;
+
+          &__title {
+            font-size: 0.8em;
+            font-weight: 500;
+            font-family: "BatonTurboWeb-Bold";
+          }
+
+          &__pagination {
+            font-size: 0.5em;
+
+            &__number {
+              font-size: 1.4em;
+            }
+          }
         }
 
         .main-title {
+          margin: 0;
           font-size: 1.2em;
           font-weight: 700;
           margin-bottom: 20px;
-        }
-
-        * {
-          margin: 0;
         }
 
         .btn-primary {

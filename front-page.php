@@ -24,7 +24,14 @@
 				if( $hero ):
 			?>
 			<div class="hero-data-container">
-				<h2 class="slide-title"><?php echo $hero['slide-title'];?></h2>
+				<div class="hero-data-container__container">
+					<h2 class="hero-data-container__container__title"><?php echo $hero['slide-title'];?></h2>
+					<h3 class="hero-data-container__container__pagination">
+						<span class="hero-data-container__container__pagination__number">01</span>
+						/02
+					</h3>
+				</div>
+
 				<h1 class="main-title"><?php echo $hero['main-title'];?></h1>
 
 				<button class="btn btn-primary"><?php echo $hero['button-text'];?></button>
@@ -42,7 +49,15 @@
 				if( $hero ):
 			?>
 			<div class="hero-data-container">
-				<h2 class="slide-title"><?php echo $hero['slide-title'];?></h2>
+				<div class="hero-data-container__container">
+					<h2 class="hero-data-container__container__title"><?php echo $hero['slide-title'];?></h2>
+					<h3 class="hero-data-container__container__pagination">
+						<span class="hero-data-container__container__pagination__number">02</span>
+						/02
+					</h3>
+				</div>
+
+
 				<h1 class="main-title"><?php echo $hero['main-title'];?></h1>
 
 				<button class="btn btn-primary"><?php echo $hero['button-text'];?></button>

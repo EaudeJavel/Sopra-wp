@@ -124,9 +124,12 @@ table {
 
 @font-face {
   font-family: "BatonTurboWeb-Regular";
-  src: url("../fonts/BatonTurboWeb-Regular.woff") format("woff");
+  src: url("./assets/fonts/BatonTurboWeb-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
+@font-face {
+  font-family: "BatonTurboWeb-Bold";
+  src: url("./assets/fonts/BatonTurboWeb-Bold.woff") format("woff"); }
 .header {
   position: fixed;
   top: 0;
@@ -232,7 +235,7 @@ table {
   #fullpage .section .hero-slide-right .fp-overflow,
   #fullpage .section .hero .fp-overflow {
     max-width: 1280px;
-    width: 100%;
+    width: 85%;
     margin: auto; }
     #fullpage .section .hero-slide .fp-overflow .bg-image img,
     #fullpage .section .hero-slide-right .fp-overflow .bg-image img,
@@ -252,22 +255,34 @@ table {
     width: 43%;
     text-align: left;
     color: #fff; }
-    #fullpage .section .hero-slide .hero-data-container .slide-title,
-    #fullpage .section .hero-slide-right .hero-data-container .slide-title,
-    #fullpage .section .hero .hero-data-container .slide-title {
-      font-size: 0.8em;
-      font-weight: 500;
-      margin-bottom: 20px; }
+    #fullpage .section .hero-slide .hero-data-container__container,
+    #fullpage .section .hero-slide-right .hero-data-container__container,
+    #fullpage .section .hero .hero-data-container__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px; }
+      #fullpage .section .hero-slide .hero-data-container__container__title,
+      #fullpage .section .hero-slide-right .hero-data-container__container__title,
+      #fullpage .section .hero .hero-data-container__container__title {
+        font-size: 0.8em;
+        font-weight: 500;
+        font-family: "BatonTurboWeb-Bold"; }
+      #fullpage .section .hero-slide .hero-data-container__container__pagination,
+      #fullpage .section .hero-slide-right .hero-data-container__container__pagination,
+      #fullpage .section .hero .hero-data-container__container__pagination {
+        font-size: 0.5em; }
+        #fullpage .section .hero-slide .hero-data-container__container__pagination__number,
+        #fullpage .section .hero-slide-right .hero-data-container__container__pagination__number,
+        #fullpage .section .hero .hero-data-container__container__pagination__number {
+          font-size: 1.4em; }
     #fullpage .section .hero-slide .hero-data-container .main-title,
     #fullpage .section .hero-slide-right .hero-data-container .main-title,
     #fullpage .section .hero .hero-data-container .main-title {
+      margin: 0;
       font-size: 1.2em;
       font-weight: 700;
       margin-bottom: 20px; }
-    #fullpage .section .hero-slide .hero-data-container *,
-    #fullpage .section .hero-slide-right .hero-data-container *,
-    #fullpage .section .hero .hero-data-container * {
-      margin: 0; }
     #fullpage .section .hero-slide .hero-data-container .btn-primary,
     #fullpage .section .hero-slide-right .hero-data-container .btn-primary,
     #fullpage .section .hero .hero-data-container .btn-primary {
@@ -311,41 +326,45 @@ table {
   color: white; }
 
 .whitepapers-block {
+  max-width: 1024px;
   width: 100%;
-  height: 200px;
+  height: 130px;
   display: flex;
   background-color: #171717;
   color: white;
-  margin: 45px 0; }
+  margin: 100px auto auto; }
   .whitepapers-block__title span {
     transform: rotate(-90deg);
     font-size: 1rem; }
   .whitepapers-block__article {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
     width: 25%;
     font-size: 24px;
     text-align: left;
     padding: 20px; }
+    .whitepapers-block__article__title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      font-family: "BatonTurboWeb-Bold"; }
     .whitepapers-block__article * {
       margin: 5px 0; }
     .whitepapers-block__article__category-badge {
       height: 20px;
-      font-size: 1rem;
+      font-size: 0.6rem;
       display: flex;
       align-items: center;
-      transition: all 0.3s ease; }
+      transition: all 0.3s ease;
+      text-transform: uppercase; }
       .whitepapers-block__article__category-badge a {
         background: linear-gradient(313.38deg, #ff54c1 -2.79%, #ffb68d 50.95%, #ffc700 102.51%);
         color: #171717;
-        padding: 2px 10px; }
+        padding: 2px 10px;
+        border-radius: 0.1rem; }
       .whitepapers-block__article__category-badge:hover {
         background-color: #171717;
         color: #fff; }
-    .whitepapers-block__article__title {
-      font-size: 1rem;
-      font-weight: 700; }
     .whitepapers-block__article__actions {
       display: flex;
       align-items: center;
@@ -359,7 +378,8 @@ table {
         font-weight: 500;
         text-transform: uppercase;
         position: relative;
-        transition: color 0.3s ease; }
+        transition: color 0.3s ease;
+        font-family: "BatonTurboWeb-Bold"; }
         .whitepapers-block__article__actions__button::after {
           content: "";
           position: absolute;

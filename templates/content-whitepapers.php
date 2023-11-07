@@ -1,16 +1,14 @@
 <?php
 // WP_Query arguments to get the last 4 posts
 $args = array(
-    'post_type'              => 'post', // or your custom post type if necessary
+    'post_type'              => 'post',
     'post_status'            => 'publish',
-    'posts_per_page'         => '4', // Number of posts to show
+    'posts_per_page'         => '4',
     'ignore_sticky_posts'    => true, // Ignore sticky posts
 );
 
-// The Query
 $whitepapers_query = new WP_Query( $args );
 
-// The Loop
 if ( $whitepapers_query->have_posts() ) : ?>
 
     <div class="whitepapers-block">
@@ -22,7 +20,7 @@ if ( $whitepapers_query->have_posts() ) : ?>
 
             <div class="whitepapers-block__article">
                 <span class="whitepapers-block__article__category-badge">
-                    <?php echo get_the_category_list(', '); // Categories as badges ?>
+                    <?php echo get_the_category_list(', '); ?>
                 </span>
 
                 <h3 class="whitepapers-block__article__title"><?php the_title(); ?></h3>
