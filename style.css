@@ -235,7 +235,7 @@ table {
   #fullpage .section .hero-slide-right .fp-overflow,
   #fullpage .section .hero .fp-overflow {
     max-width: 1280px;
-    width: 85%;
+    width: 80%;
     margin: auto; }
     #fullpage .section .hero-slide .fp-overflow .bg-image img,
     #fullpage .section .hero-slide-right .fp-overflow .bg-image img,
@@ -280,7 +280,7 @@ table {
     #fullpage .section .hero-slide-right .hero-data-container .main-title,
     #fullpage .section .hero .hero-data-container .main-title {
       margin: 0;
-      font-size: 1.2em;
+      font-size: 1.1em;
       font-weight: 700;
       margin-bottom: 20px; }
     #fullpage .section .hero-slide .hero-data-container .btn-primary,
@@ -321,6 +321,52 @@ table {
   background: linear-gradient(313.38deg, #ff54c1 -2.79%, #ffb68d 50.95%, #ffc700 102.51%); }
 #fullpage .section-our_mission {
   background: linear-gradient(140.72deg, #93ffde -6.15%, #a6bfff 65.26%, #d9a8ff 126.96%); }
+  #fullpage .section-our_mission .fp-overflow {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto; }
+    #fullpage .section-our_mission .fp-overflow .hero-data-container {
+      width: 30%;
+      text-align: left; }
+      #fullpage .section-our_mission .fp-overflow .hero-data-container__container {
+        margin-bottom: 24px; }
+        #fullpage .section-our_mission .fp-overflow .hero-data-container__container__title {
+          margin-bottom: 24px;
+          font-size: 0.8em;
+          font-weight: 500;
+          font-family: "BatonTurboWeb-Bold"; }
+        #fullpage .section-our_mission .fp-overflow .hero-data-container__container__description {
+          font-size: 0.5em;
+          text-shadow: 2px 2px 2px #fff; }
+          #fullpage .section-our_mission .fp-overflow .hero-data-container__container__description p {
+            line-height: 1.2; }
+        #fullpage .section-our_mission .fp-overflow .hero-data-container__container__btn-secondary {
+          width: 120px;
+          height: 40px;
+          font-weight: 700;
+          background-color: #171717;
+          color: #fff;
+          border: none;
+          transition: all 0.3s ease; }
+          #fullpage .section-our_mission .fp-overflow .hero-data-container__container__btn-secondary::before {
+            bottom: 110%;
+            content: "";
+            height: 110%;
+            left: -10px;
+            position: absolute;
+            transition: -webkit-transform 0.3s;
+            transition: transform 0.3s;
+            transition: transform 0.3s, -webkit-transform 0.3s;
+            transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+            width: calc(100% + 20px);
+            z-index: -1; }
+          #fullpage .section-our_mission .fp-overflow .hero-data-container__container__btn-secondary:hover {
+            color: #171717;
+            background-color: #fff; }
+            #fullpage .section-our_mission .fp-overflow .hero-data-container__container__btn-secondary:hover::before {
+              -webkit-transform: translate3d(0, -10px, 0);
+              transform: translate3d(0, -10px, 0); }
 #fullpage .section-footer {
   background-color: #171717;
   color: white; }
