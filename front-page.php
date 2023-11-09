@@ -86,11 +86,62 @@
 				get_template_part( 'templates/content', 'videos' ); ?>
 		</div>
 
-	<div class="section fp-auto-height">
+	<div class="section fp-auto-height section-footer">
+			<div class="footer-menus">
+				<?php
+					// add title for each menu
+					$footer_menus = array(
+						'f_menu_offers'    => 'Offers',
+						'f_menu_services'  => 'Services',
+						'f_menu_company'   => 'Company',
+						'f_menu_followus'  => 'Follow Us',
+						'f_menu_contact'   => 'Contact'
+					);
 
-		<div>Section 3</div>
+					// display each title before the menu
+					foreach ($footer_menus as $menu_key => $menu_title) {
+						echo '<div class="footer-menus__section">';
+						echo '<h3 class="footer-menus__section__title">' . esc_html__( $menu_title, 'sopra' ) . '</h3>';
+						wp_nav_menu( array(
+							'theme_location' => $menu_key,
+							'container'      => 'nav',
+							'menu_class'     => 'footer-menus__section__single',
+							'fallback_cb'    => false
+						));
+						echo '</div>';
+					}
+				?>
+			</div>
+				<select name="lang" id="lang" class="footer-menus__lang">
+					<option value="english">english</option>
+					<option value="french">french</option>
+				</select>
 
-	</div>
+			<div class="separator"></div>
+
+			<!-- Menu -->
+				<?php
+					wp_nav_menu( array(
+						'theme_location' => 'f_menu_legal',
+						'container' => 'nav',
+						'menu_class' => 'menu',
+						'fallback_cb' => false // Do not fall back to wp_page_menu()
+					) );
+				?>
+
+			<div class="footer-bottom-container">
+				<div class="copyright">© Sopra Banking Software. All right Reserved. ® Sopra Banking Software is a registered trademark of Sopra Steria</div>
+				<?php
+					if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
+						the_custom_logo();
+					} else {
+						echo '<a href="' . esc_url( home_url( '/' ) ) . '" rel="home">';
+						echo '<img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/Sopra Logos Final - 200717_color-white' . get_bloginfo( 'name' ) . '" />';
+						echo '</a>';
+					}
+				?>
+			</div>
+		</div>
 </div>
 
 <?php get_footer(); ?>

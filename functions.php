@@ -3,8 +3,8 @@
     // Register styles to theme
     function sopra_register_styles() {
 
-        wp_enqueue_style( 'sopra-wp', get_template_directory_uri(  ) . "/style.css" , array(), '1.0' );
         wp_enqueue_style( 'fullpage-css', 'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.css', array(), '4.0.20' );
+        wp_enqueue_style( 'sopra-wp', get_template_directory_uri(  ) . "/style.css" , array(), '1.0' );
 
     };
 
@@ -35,10 +35,16 @@
     add_action( 'after_setup_theme', 'sopra_theme_setup', 0 );
 
 
-    // Registers a menu with the name "Primary Menu" that can be used with wp_nav_menu().
+    // Registers menus that can be used with wp_nav_menu().
     function sopra_register_nav_menu(){
         register_nav_menus( array(
             'primary_menu' => __( 'Primary Menu', 'sopra' ),
+            'f_menu_offers' => __( 'Footer offers', 'sopra' ),
+            'f_menu_services' => __( 'Footer services', 'sopra' ),
+            'f_menu_company' => __( 'Footer company', 'sopra' ),
+            'f_menu_followus' => __( 'Footer followus', 'sopra' ),
+            'f_menu_contact' => __( 'Footer contact', 'sopra' ),
+            'f_menu_legal' => __( 'Footer legal', 'sopra' ),
         ) );
     };
 

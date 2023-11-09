@@ -1,0 +1,75 @@
+.section-footer {
+  padding: 3rem;
+
+  .fp-overflow {
+    overflow-y: hidden;
+  }
+
+  .footer-menus {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    &__section {
+      padding: 20px;
+      text-align: left;
+
+      &__title {
+        font-size: 0.8rem;
+        font-weight: 700;
+        font-family: "BatonTurboWeb-Bold";
+        color: white;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+      }
+
+      &__single {
+        .menu-item {
+          padding: 0.5rem 0;
+          font-size: 0.8rem;
+          font-weight: 500;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .menu-footer-legal-container {
+    .menu {
+      display: flex;
+
+      .menu-item {
+        margin-right: 24px;
+
+        a {
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+
+  .separator {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    margin: 2rem 0;
+  }
+
+  .footer-bottom-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .copyright {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: white;
+    }
+
+    .custom-logo {
+      width: 250px;
+      height: auto;
+      display: flex;
+    }
+  }
+}

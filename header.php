@@ -51,7 +51,7 @@
 
 				<div class="right-holder">
 					<!-- Contact Button -->
-					<a href="<?php echo site_url('/contact'); ?>" class="contact-button">Contact Us</a>
+					<button class="contact-button">Contact Us</button>
 
 					<!-- Search Icon and Bar -->
 					<div class="search-bar">

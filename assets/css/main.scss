@@ -5,6 +5,7 @@
 @import "home";
 @import "videos";
 @import "whitepapers";
+@import "footer";
 
 body {
   background-color: $background-color;
@@ -12,11 +13,33 @@ body {
 }
 
 a {
-  color: #fff;
+  color: white;
   text-decoration: none;
-  word-wrap: break-word;
-}
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+  transition: color 0.3s ease;
 
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -5px;
+    left: 0;
+    background: $primary-gradient;
+    transition: width 0.3s ease;
+    pointer-events: none;
+  }
+
+  &:hover {
+    // Expand the pseudo-element to full width on hover
+    &::after {
+      width: 100%;
+    }
+  }
+}
 .section {
   text-align: center;
   font-size: 3em;
