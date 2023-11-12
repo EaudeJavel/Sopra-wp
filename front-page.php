@@ -18,6 +18,9 @@
 <div id="fullpage">
     <div class="section">
         <div class="slide hero-slide hero">
+			<div id="bg" className="bg-fixed"></div>
+			<div id="bg-svg" className="bg-fixed"></div>
+			<div id="bg-img" className="bg-fixed"></div>
 			<!-- if homepage has field slide-1, then  -->
 			<?php
 				$hero = get_field('slide-1');
@@ -37,9 +40,7 @@
 				<button class="btn btn-primary"><?php echo $hero['button-text'];?></button>
 			</div>
 			<?php endif;
-
 				get_template_part( 'templates/content', 'whitepapers' ); ?>
-
 		</div>
 
 		<div class="slide hero-slide-right">
@@ -112,10 +113,10 @@
 					}
 				?>
 			</div>
-				<select name="lang" id="lang" class="footer-menus__lang">
+				<!-- <select name="lang" id="lang" class="footer-menus__lang">
 					<option value="english">english</option>
 					<option value="french">french</option>
-				</select>
+				</select> -->
 
 			<div class="separator"></div>
 

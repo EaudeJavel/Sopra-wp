@@ -4,7 +4,7 @@ let footerShown = false;
 
 new fullpage("#fullpage", {
   anchors: ["firstPage", "secondPage", "footer"],
-  navigation: true,
-  slidesNavigation: true,
+  navigation: false,
+  slidesNavigation: false,
   slidesNavPosition: "bottom",
 });

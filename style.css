@@ -181,8 +181,7 @@ table {
       margin-left: 20px;
       width: 150px;
       height: 50px;
-      background-color: pink;
-      /* Use a font library like Font Awesome for the search icon or use background-image */ }
+      background-color: pink; }
       .header-menu .right-holder .search-bar .search-field {
         width: 100%;
         height: 100%;
@@ -213,6 +212,37 @@ table {
       .header-menu .right-holder .search-bar .search-icon i {
         font-size: 20px; }
 
+@media (max-width: 768px) {
+  .header-menu {
+    flex-direction: column;
+    align-items: flex-start; }
+    .header-menu .custom-logo-link img {
+      width: 200px;
+      margin-bottom: 10px; }
+    .header-menu .menu-header-main-menu-container .menu {
+      flex-direction: column;
+      align-items: flex-start; }
+      .header-menu .menu-header-main-menu-container .menu .menu-item {
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+        width: 100%;
+        text-align: left; }
+    .header-menu .right-holder {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 10px; }
+      .header-menu .right-holder .contact-button {
+        margin-right: 0;
+        margin-bottom: 10px;
+        font-size: 0.6rem; }
+      .header-menu .right-holder .search-bar {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px; }
+        .header-menu .right-holder .search-bar .search-field {
+          width: calc(100% - 20px); }
+        .header-menu .right-holder .search-bar .search-field:focus {
+          width: calc(100% - 60px); } }
 #fullpage .section .hero-slide,
 #fullpage .section .hero-slide-right,
 #fullpage .section .hero {
@@ -238,6 +268,7 @@ table {
   #fullpage .section .hero-slide .hero-data-container,
   #fullpage .section .hero-slide-right .hero-data-container,
   #fullpage .section .hero .hero-data-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 43%;
@@ -316,6 +347,7 @@ table {
     margin: auto; }
     #fullpage .section-our_mission .fp-overflow .hero-data-container {
       width: 30%;
+      padding-top: 3rem;
       text-align: left; }
       #fullpage .section-our_mission .fp-overflow .hero-data-container__container {
         margin-bottom: 24px; }
@@ -360,6 +392,56 @@ table {
   background-color: #171717;
   color: white; }
 
+@media only screen and (max-width: 768px) {
+  .section .hero-slide,
+  .section .hero-slide-right,
+  .section .hero {
+    padding-top: 50px; }
+    .section .hero-slide .fp-overflow,
+    .section .hero-slide-right .fp-overflow,
+    .section .hero .fp-overflow {
+      width: 90%; }
+      .section .hero-slide .fp-overflow .bg-image img,
+      .section .hero-slide-right .fp-overflow .bg-image img,
+      .section .hero .fp-overflow .bg-image img {
+        left: 0; }
+    .section .hero-slide .hero-data-container,
+    .section .hero-slide-right .hero-data-container,
+    .section .hero .hero-data-container {
+      width: 100%;
+      padding: 10px; }
+      .section .hero-slide .hero-data-container__container,
+      .section .hero-slide-right .hero-data-container__container,
+      .section .hero .hero-data-container__container {
+        flex-direction: column; }
+        .section .hero-slide .hero-data-container__container__title, .section .hero-slide .hero-data-container__container__pagination,
+        .section .hero-slide-right .hero-data-container__container__title,
+        .section .hero-slide-right .hero-data-container__container__pagination,
+        .section .hero .hero-data-container__container__title,
+        .section .hero .hero-data-container__container__pagination {
+          font-size: 0.7em; }
+      .section .hero-slide .hero-data-container .main-title,
+      .section .hero-slide-right .hero-data-container .main-title,
+      .section .hero .hero-data-container .main-title {
+        font-size: 1em; }
+      .section .hero-slide .hero-data-container .btn-primary,
+      .section .hero-slide-right .hero-data-container .btn-primary,
+      .section .hero .hero-data-container .btn-primary {
+        width: 100%; }
+  .section .section-our_mission .fp-overflow {
+    flex-direction: column; }
+    .section .section-our_mission .fp-overflow .hero-data-container {
+      width: 100%;
+      padding-top: 2rem; }
+      .section .section-our_mission .fp-overflow .hero-data-container__container__title {
+        font-size: 0.7em; }
+      .section .section-our_mission .fp-overflow .hero-data-container__container__description {
+        font-size: 0.6em; }
+      .section .section-our_mission .fp-overflow .hero-data-container__container__btn-secondary {
+        width: 100%; }
+
+  .section-footer {
+    padding: 20px; } }
 .videos-block {
   width: 190px;
   display: flex;
@@ -440,6 +522,7 @@ table {
           width: 100%; }
 
 .whitepapers-block {
+  position: relative;
   max-width: 1024px;
   width: 100%;
   height: 130px;
@@ -588,6 +671,23 @@ a {
 .fp-watermark {
   display: none; }
 
+.fp-controlArrow.fp-prev {
+  left: 2rem;
+  border: none;
+  width: 32px;
+  height: 32px;
+  background: url(assets/images/left.svg) no-repeat;
+  border-radius: 100%;
+  cursor: pointer; }
+
+.fp-controlArrow.fp-next {
+  right: 2rem;
+  border: none;
+  width: 32px;
+  height: 32px;
+  background: url(assets/images/right.svg) no-repeat;
+  cursor: pointer; }
+
 .btn {
   display: inline-block;
   letter-spacing: 0.03em;
@@ -596,5 +696,41 @@ a {
   cursor: pointer;
   text-transform: uppercase;
   border-radius: 0.25rem; }
+
+#bg-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1440px;
+  height: 90%;
+  object-fit: cover;
+  z-index: 0;
+  background-image: url(assets/images/homepage/img2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; }
+
+#bg-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  background-image: url(assets/images/homepage/vector5.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; }
+
+#bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+  background: linear-gradient(313.38deg, #ff54c1 -2.79%, #ffb68d 50.95%, #ffc700 102.51%); }
 
 /*# sourceMappingURL=style.css.map */

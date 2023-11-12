@@ -24,6 +24,7 @@
       }
 
       .hero-data-container {
+        position: relative;
         display: flex;
         flex-direction: column;
         width: 43%;
@@ -110,6 +111,7 @@
 
       .hero-data-container {
         width: 30%;
+        padding-top: 3rem;
         text-align: left;
 
         &__container {
@@ -173,5 +175,74 @@
   .section-footer {
     background-color: $background-color;
     color: white;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .section {
+    .hero-slide,
+    .hero-slide-right,
+    .hero {
+      padding-top: 50px; // Reduced padding for smaller screens
+
+      .fp-overflow {
+        width: 90%; // Increase width for smaller screens
+
+        .bg-image img {
+          left: 0; // Adjust image position for smaller screens
+        }
+      }
+
+      .hero-data-container {
+        width: 100%; // Full width on smaller screens
+        padding: 10px; // Add padding for smaller screens
+
+        &__container {
+          flex-direction: column; // Stack elements vertically on smaller screens
+
+          &__title,
+          &__pagination {
+            font-size: 0.7em; // Adjust font size for smaller screens
+          }
+        }
+
+        .main-title {
+          font-size: 1em; // Adjust main title font size
+        }
+
+        .btn-primary {
+          width: 100%; // Full width button on smaller screens
+        }
+      }
+    }
+
+    .section-our_mission {
+      .fp-overflow {
+        flex-direction: column; // Stack elements vertically
+
+        .hero-data-container {
+          width: 100%; // Full width on smaller screens
+          padding-top: 2rem;
+
+          &__container {
+            &__title {
+              font-size: 0.7em; // Adjust font size for smaller screens
+            }
+
+            &__description {
+              font-size: 0.6em; // Adjust font size for description
+            }
+
+            &__btn-secondary {
+              width: 100%; // Full width button on smaller screens
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .section-footer {
+    padding: 20px; // Add padding to the footer for smaller screens
   }
 }
