@@ -1,5 +1,9 @@
 #fullpage {
   .section {
+    .slide {
+      position: relative;
+    }
+
     .hero-slide,
     .hero-slide-right,
     .hero {
@@ -110,6 +114,7 @@
       margin: auto;
 
       .hero-data-container {
+        position: relative;
         width: 30%;
         padding-top: 3rem;
         text-align: left;
@@ -245,4 +250,144 @@
   .section-footer {
     padding: 20px; // Add padding to the footer for smaller screens
   }
+}
+
+#bg-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1440px;
+  height: 90%;
+  object-fit: cover;
+  z-index: 0;
+  background-attachment: fixed;
+  background-image: url(assets/images/homepage/img2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#bg-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  background-attachment: fixed;
+  background-image: url(assets/images/homepage/vector5.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+  background: linear-gradient(
+    313.38deg,
+    #ff54c1 -2.79%,
+    #ffb68d 50.95%,
+    #ffc700 102.51%
+  );
+}
+
+// Financing platform
+#s1-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1440px;
+  height: 90%;
+  object-fit: cover;
+  z-index: 0;
+  background-attachment: fixed;
+  background-image: url(assets/images/homepage/img1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#s1-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  background-attachment: fixed;
+  background-image: url(assets/images/homepage/vector4.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#s1-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+  background: linear-gradient(
+    313.38deg,
+    #ff54c1 -2.79%,
+    #ffb68d 50.95%,
+    #ffc700 102.51%
+  );
+}
+
+// our missions
+#s2-img {
+  position: absolute;
+  bottom: 0;
+  right: 200px;
+  width: 1440px;
+  height: 90%;
+  object-fit: cover;
+  z-index: 0;
+  background-attachment: fixed;
+  background-image: url(assets/images/homepage/img1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#s2-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  background-attachment: fixed;
+  background-image: url(assets/images/homepage/vector1.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#s2-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+  background: linear-gradient(
+    313.38deg,
+    #ff54c1 -2.79%,
+    #ffb68d 50.95%,
+    #ffc700 102.51%
+  );
 }

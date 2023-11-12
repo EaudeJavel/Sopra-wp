@@ -53,11 +53,6 @@
 					<!-- Contact Button -->
 					<button class="contact-button">Contact Us</button>
 
-					<!-- Search Icon and Bar -->
-					<div class="search-bar">
-						<input type="search" id="search-field" class="search-field" placeholder="Search...">
-						<label for="search-field" class="search-icon"><i class="fa fa-search"></i></label>
-					</div>
 				</div>
 			</div>
 		</header>

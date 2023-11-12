@@ -44,6 +44,10 @@
 		</div>
 
 		<div class="slide hero-slide-right">
+			<div id="s1-bg"></div>
+			<div id="s1-svg"></div>
+			<div id="s1-img"></div>
+
 			<!-- if homepage has field slide-2, then  -->
 			<?php
 				$hero = get_field('slide-2');
@@ -70,6 +74,9 @@
 		</div>
     </div>
 	<div class="section section-our_mission">
+		<div id="s2-bg" className="bg-fixed"></div>
+		<div id="s2-svg" className="bg-fixed"></div>
+		<div id="s2-img" className="bg-fixed"></div>
 
 		<!-- if homepage has field slide-3, then  -->
 			<?php
